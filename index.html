@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+            }
+           
+        </style>
+    </head>
+    <body>
+<img id="slide" src="/imgs/1.jpeg"></img>
+
+      
+        
+        <script>
+            const imgslide = document.getElementById('slide');
+            const imgs = ['1.jpeg', '2.jpeg', '3.jpeg']
+            var iterator = 1;
+            setInterval(() => {
+                imgslide.src = `/imgs/${imgs[iterator]}`;
+                iterator = (iterator + 1) % imgs.length;
+            }, 2000); 
+
+
+
+        </script>
+    </body>
+</html>
